@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Task Manager</h1>
+    <form id="add-user-form">
+        <label for="user-name">User Name:</label>
+        <input type="text" id="user-name" required>
+        <button type="submit">Add User</button>
+    </form>
+    <form id="add-task-form">
+        <label for="task-name">Task Name:</label>
+        <input type="text" id="task-name" required>
+        <label for="due-date">Due Date:</label>
+        <input type="date" id="due-date" required>
+        <select id="status-select">
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+        <button type="submit">Create Task</button>
+    </form>
+    <div id="task-list-container">
+        <h2>Task List</h2>
+        <input type="text" id="filter-task-name" placeholder="Filter by Task Name">
+        <select id="filter-status-select">
+            <option value="all">All</option>
+            <option value="pending">Pending</option>
+            <option value="completed">Completed</option>
+        </select>
+        <input type="date" id="filter-due-date" placeholder="Filter by Due Date">
+        <ul id="task-list"></ul>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
